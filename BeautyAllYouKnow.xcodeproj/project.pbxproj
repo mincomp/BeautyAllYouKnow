@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F79E1A671B47B43900FDE0DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A661B47B43900FDE0DD /* main.m */; };
+		F79E1A6A1B47B43900FDE0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A691B47B43900FDE0DD /* AppDelegate.m */; };
+		F79E1A6D1B47B43900FDE0DD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A6C1B47B43900FDE0DD /* MasterViewController.m */; };
+		F79E1A701B47B43900FDE0DD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A6F1B47B43900FDE0DD /* DetailViewController.m */; };
+		F79E1A731B47B43900FDE0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79E1A711B47B43900FDE0DD /* Main.storyboard */; };
+		F79E1A751B47B43900FDE0DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79E1A741B47B43900FDE0DD /* Images.xcassets */; };
+		F79E1A781B47B43900FDE0DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79E1A761B47B43900FDE0DD /* LaunchScreen.xib */; };
+		F79E1A841B47B43900FDE0DD /* BeautyAllYouKnowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A831B47B43900FDE0DD /* BeautyAllYouKnowTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F79E1A7E1B47B43900FDE0DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F79E1A591B47B43900FDE0DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F79E1A601B47B43900FDE0DD;
+			remoteInfo = BeautyAllYouKnow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F79E1A611B47B43900FDE0DD /* BeautyAllYouKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyAllYouKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79E1A651B47B43900FDE0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79E1A661B47B43900FDE0DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F79E1A681B47B43900FDE0DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F79E1A691B47B43900FDE0DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F79E1A6B1B47B43900FDE0DD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		F79E1A6C1B47B43900FDE0DD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		F79E1A6E1B47B43900FDE0DD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F79E1A6F1B47B43900FDE0DD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F79E1A721B47B43900FDE0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F79E1A741B47B43900FDE0DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F79E1A771B47B43900FDE0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F79E1A7D1B47B43900FDE0DD /* BeautyAllYouKnowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautyAllYouKnowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79E1A821B47B43900FDE0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79E1A831B47B43900FDE0DD /* BeautyAllYouKnowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeautyAllYouKnowTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F79E1A5E1B47B43900FDE0DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79E1A7A1B47B43900FDE0DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F79E1A581B47B43900FDE0DD = {
+			isa = PBXGroup;
+			children = (
+				F79E1A631B47B43900FDE0DD /* BeautyAllYouKnow */,
+				F79E1A801B47B43900FDE0DD /* BeautyAllYouKnowTests */,
+				F79E1A621B47B43900FDE0DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F79E1A621B47B43900FDE0DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F79E1A611B47B43900FDE0DD /* BeautyAllYouKnow.app */,
+				F79E1A7D1B47B43900FDE0DD /* BeautyAllYouKnowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F79E1A631B47B43900FDE0DD /* BeautyAllYouKnow */ = {
+			isa = PBXGroup;
+			children = (
+				F79E1A681B47B43900FDE0DD /* AppDelegate.h */,
+				F79E1A691B47B43900FDE0DD /* AppDelegate.m */,
+				F79E1A6B1B47B43900FDE0DD /* MasterViewController.h */,
+				F79E1A6C1B47B43900FDE0DD /* MasterViewController.m */,
+				F79E1A6E1B47B43900FDE0DD /* DetailViewController.h */,
+				F79E1A6F1B47B43900FDE0DD /* DetailViewController.m */,
+				F79E1A711B47B43900FDE0DD /* Main.storyboard */,
+				F79E1A741B47B43900FDE0DD /* Images.xcassets */,
+				F79E1A761B47B43900FDE0DD /* LaunchScreen.xib */,
+				F79E1A641B47B43900FDE0DD /* Supporting Files */,
+			);
+			path = BeautyAllYouKnow;
+			sourceTree = "<group>";
+		};
+		F79E1A641B47B43900FDE0DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F79E1A651B47B43900FDE0DD /* Info.plist */,
+				F79E1A661B47B43900FDE0DD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F79E1A801B47B43900FDE0DD /* BeautyAllYouKnowTests */ = {
+			isa = PBXGroup;
+			children = (
+				F79E1A831B47B43900FDE0DD /* BeautyAllYouKnowTests.m */,
+				F79E1A811B47B43900FDE0DD /* Supporting Files */,
+			);
+			path = BeautyAllYouKnowTests;
+			sourceTree = "<group>";
+		};
+		F79E1A811B47B43900FDE0DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F79E1A821B47B43900FDE0DD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F79E1A601B47B43900FDE0DD /* BeautyAllYouKnow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79E1A871B47B43900FDE0DD /* Build configuration list for PBXNativeTarget "BeautyAllYouKnow" */;
+			buildPhases = (
+				F79E1A5D1B47B43900FDE0DD /* Sources */,
+				F79E1A5E1B47B43900FDE0DD /* Frameworks */,
+				F79E1A5F1B47B43900FDE0DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeautyAllYouKnow;
+			productName = BeautyAllYouKnow;
+			productReference = F79E1A611B47B43900FDE0DD /* BeautyAllYouKnow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F79E1A7C1B47B43900FDE0DD /* BeautyAllYouKnowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79E1A8A1B47B43900FDE0DD /* Build configuration list for PBXNativeTarget "BeautyAllYouKnowTests" */;
+			buildPhases = (
+				F79E1A791B47B43900FDE0DD /* Sources */,
+				F79E1A7A1B47B43900FDE0DD /* Frameworks */,
+				F79E1A7B1B47B43900FDE0DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F79E1A7F1B47B43900FDE0DD /* PBXTargetDependency */,
+			);
+			name = BeautyAllYouKnowTests;
+			productName = BeautyAllYouKnowTests;
+			productReference = F79E1A7D1B47B43900FDE0DD /* BeautyAllYouKnowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F79E1A591B47B43900FDE0DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Summer Studio";
+				TargetAttributes = {
+					F79E1A601B47B43900FDE0DD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F79E1A7C1B47B43900FDE0DD = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F79E1A601B47B43900FDE0DD;
+					};
+				};
+			};
+			buildConfigurationList = F79E1A5C1B47B43900FDE0DD /* Build configuration list for PBXProject "BeautyAllYouKnow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F79E1A581B47B43900FDE0DD;
+			productRefGroup = F79E1A621B47B43900FDE0DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F79E1A601B47B43900FDE0DD /* BeautyAllYouKnow */,
+				F79E1A7C1B47B43900FDE0DD /* BeautyAllYouKnowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F79E1A5F1B47B43900FDE0DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79E1A731B47B43900FDE0DD /* Main.storyboard in Resources */,
+				F79E1A781B47B43900FDE0DD /* LaunchScreen.xib in Resources */,
+				F79E1A751B47B43900FDE0DD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79E1A7B1B47B43900FDE0DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F79E1A5D1B47B43900FDE0DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79E1A6A1B47B43900FDE0DD /* AppDelegate.m in Sources */,
+				F79E1A6D1B47B43900FDE0DD /* MasterViewController.m in Sources */,
+				F79E1A671B47B43900FDE0DD /* main.m in Sources */,
+				F79E1A701B47B43900FDE0DD /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79E1A791B47B43900FDE0DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79E1A841B47B43900FDE0DD /* BeautyAllYouKnowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F79E1A7F1B47B43900FDE0DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F79E1A601B47B43900FDE0DD /* BeautyAllYouKnow */;
+			targetProxy = F79E1A7E1B47B43900FDE0DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F79E1A711B47B43900FDE0DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F79E1A721B47B43900FDE0DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F79E1A761B47B43900FDE0DD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F79E1A771B47B43900FDE0DD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F79E1A851B47B43900FDE0DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F79E1A861B47B43900FDE0DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F79E1A881B47B43900FDE0DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeautyAllYouKnow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F79E1A891B47B43900FDE0DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeautyAllYouKnow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F79E1A8B1B47B43900FDE0DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeautyAllYouKnowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautyAllYouKnow.app/BeautyAllYouKnow";
+			};
+			name = Debug;
+		};
+		F79E1A8C1B47B43900FDE0DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeautyAllYouKnowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautyAllYouKnow.app/BeautyAllYouKnow";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F79E1A5C1B47B43900FDE0DD /* Build configuration list for PBXProject "BeautyAllYouKnow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79E1A851B47B43900FDE0DD /* Debug */,
+				F79E1A861B47B43900FDE0DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F79E1A871B47B43900FDE0DD /* Build configuration list for PBXNativeTarget "BeautyAllYouKnow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79E1A881B47B43900FDE0DD /* Debug */,
+				F79E1A891B47B43900FDE0DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F79E1A8A1B47B43900FDE0DD /* Build configuration list for PBXNativeTarget "BeautyAllYouKnowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79E1A8B1B47B43900FDE0DD /* Debug */,
+				F79E1A8C1B47B43900FDE0DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F79E1A591B47B43900FDE0DD /* Project object */;
+}
