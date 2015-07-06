@@ -8,10 +8,15 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "RSSItem.h"
 
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property (strong, nonatomic) NSXMLParser *xmlParser;
+@property (strong, nonatomic) NSMutableArray *rssItems;
+@property (strong, nonatomic) RSSItem *currentItem;
+@property (strong, nonatomic) NSString *expectingElement;
+
 @end
 
 @implementation MasterViewController
@@ -27,10 +32,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    
+    NSString *urlStr = @"http://www.beautyallyouknow.com/?feed=rss2";
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:urlRequest
+                                       queue:queue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if ([data length] > 0 && error == nil) {
+            self.xmlParser = [[NSXMLParser alloc] initWithData:data];
+            self.xmlParser.delegate = self;
+            if ([self.xmlParser parse]) {
+                NSLog(@"Parsed");
+                [self.tableView performSelectorOnMainThread:@selector(reloadData)
+                                                 withObject:nil
+                                              waitUntilDone:YES];
+            } else {
+                NSLog(@"Failed to parse the XML");
+            }
+        } else if ([data length] == 0 && error == nil) {
+            NSLog(@"Nothing was downloaded.");
+        } else {
+            NSLog(@"Error happened = %@", error);
+        }
+    }];
+    
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -39,13 +67,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
+#pragma mark - XML Parser
+- (void) parserDidStartDocument:(NSXMLParser *)parser {
+    self.currentItem = nil;
+    self.expectingElement = nil;
+    self.rssItems = [[NSMutableArray alloc] init];
+}
+
+- (void) parser:(NSXMLParser *)parser
+didStartElement:(NSString *)elementName
+   namespaceURI:(NSString *)namespaceURI
+  qualifiedName:(NSString *)qName
+     attributes:(NSDictionary *)attributeDict {
+    if ([elementName isEqual:@"item"]) {
+        self.currentItem = [[RSSItem alloc] init];
+    } else if (self.currentItem != nil) {
+        self.expectingElement = elementName;
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void) parser:(NSXMLParser *)parser
+foundCharacters:(NSString *)string {
+    if (self.currentItem == nil || self.expectingElement == nil) {
+        return;
+    }
+    
+    if ([self.currentItem.fields objectForKey:self.expectingElement] == nil) {
+        self.currentItem.fields[self.expectingElement] = string;
+    } else {
+        [self.currentItem.fields[self.expectingElement] stringByAppendingString:string];
+    }
+}
+
+- (void) parser:(NSXMLParser *)parser
+  didEndElement:(NSString *)elementName
+   namespaceURI:(NSString *)namespaceURI
+  qualifiedName:(NSString *)qName {
+    if (self.currentItem != nil && [elementName isEqual:@"item"]) {
+        [self.rssItems addObject:self.currentItem];
+        self.currentItem = nil;
+        self.expectingElement = nil;
+    }
 }
 
 #pragma mark - Segues
@@ -53,9 +115,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        RSSItem *item = self.rssItems[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setDetailItem:item];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -68,29 +130,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return self.rssItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    RSSItem *item = self.rssItems[indexPath.row];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    UILabel *label;
+    
+    label = (UILabel *)[cell viewWithTag:1];
+    label.text = item.fields[@"title"];
+    
+    label = (UILabel *)[cell viewWithTag:2];
+    label.text = item.fields[@"description"];
+    
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
+    return NO;
 }
 
 @end

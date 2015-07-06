@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F708A6041B4A438C0056EDE0 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F708A6031B4A438C0056EDE0 /* RSSItem.m */; };
 		F79E1A671B47B43900FDE0DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A661B47B43900FDE0DD /* main.m */; };
 		F79E1A6A1B47B43900FDE0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A691B47B43900FDE0DD /* AppDelegate.m */; };
 		F79E1A6D1B47B43900FDE0DD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E1A6C1B47B43900FDE0DD /* MasterViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F708A6021B4A438C0056EDE0 /* RSSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItem.h; sourceTree = "<group>"; };
+		F708A6031B4A438C0056EDE0 /* RSSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItem.m; sourceTree = "<group>"; };
 		F79E1A611B47B43900FDE0DD /* BeautyAllYouKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyAllYouKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79E1A651B47B43900FDE0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F79E1A661B47B43900FDE0DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,9 +93,9 @@
 				F79E1A6C1B47B43900FDE0DD /* MasterViewController.m */,
 				F79E1A6E1B47B43900FDE0DD /* DetailViewController.h */,
 				F79E1A6F1B47B43900FDE0DD /* DetailViewController.m */,
+				F708A6021B4A438C0056EDE0 /* RSSItem.h */,
+				F708A6031B4A438C0056EDE0 /* RSSItem.m */,
 				F79E1A711B47B43900FDE0DD /* Main.storyboard */,
-				F79E1A741B47B43900FDE0DD /* Images.xcassets */,
-				F79E1A761B47B43900FDE0DD /* LaunchScreen.xib */,
 				F79E1A641B47B43900FDE0DD /* Supporting Files */,
 			);
 			path = BeautyAllYouKnow;
@@ -101,6 +104,8 @@
 		F79E1A641B47B43900FDE0DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F79E1A741B47B43900FDE0DD /* Images.xcassets */,
+				F79E1A761B47B43900FDE0DD /* LaunchScreen.xib */,
 				F79E1A651B47B43900FDE0DD /* Info.plist */,
 				F79E1A661B47B43900FDE0DD /* main.m */,
 			);
@@ -227,6 +232,7 @@
 				F79E1A6A1B47B43900FDE0DD /* AppDelegate.m in Sources */,
 				F79E1A6D1B47B43900FDE0DD /* MasterViewController.m in Sources */,
 				F79E1A671B47B43900FDE0DD /* main.m in Sources */,
+				F708A6041B4A438C0056EDE0 /* RSSItem.m in Sources */,
 				F79E1A701B47B43900FDE0DD /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +430,7 @@
 				F79E1A891B47B43900FDE0DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F79E1A8A1B47B43900FDE0DD /* Build configuration list for PBXNativeTarget "BeautyAllYouKnowTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +439,7 @@
 				F79E1A8C1B47B43900FDE0DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

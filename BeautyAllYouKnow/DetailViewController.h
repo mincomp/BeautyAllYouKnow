@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class RSSItem;
+
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) RSSItem *detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end
