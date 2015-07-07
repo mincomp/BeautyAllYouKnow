@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B39248B9-F5EF-48B5-A0C1-8535F59EAA4C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>BeautyAllYouKnow</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E7CB6D711AB898AD84C63E18FDC9C60E5D1BA1FD</key>
 		<string>https://github.com/mincomp/BeautyAllYouKnow.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BeautyAllYouKnow.xcodeproj/project.xcworkspace</string>
+	<string>BeautyAllYouKnow.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E7CB6D711AB898AD84C63E18FDC9C60E5D1BA1FD</key>

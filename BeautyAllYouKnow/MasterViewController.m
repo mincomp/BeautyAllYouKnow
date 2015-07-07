@@ -60,6 +60,8 @@
     }];
     
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -137,14 +139,23 @@ foundCharacters:(NSString *)string {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     RSSItem *item = self.rssItems[indexPath.row];
-
+    
     UILabel *label;
     
     label = (UILabel *)[cell viewWithTag:1];
+    label.layer.masksToBounds = YES;
+    label.layer.cornerRadius = 8;
     label.text = item.fields[@"title"];
     
     label = (UILabel *)[cell viewWithTag:2];
     label.text = item.fields[@"description"];
+    
+    UIView *view = (UIView *)[cell viewWithTag:3];
+    view.layer.masksToBounds = NO;
+    view.layer.cornerRadius = 10;
+    view.layer.shadowRadius = 2;
+    view.layer.shadowOffset = CGSizeMake(1, 1);
+    view.layer.shadowOpacity = 0.5;
     
     return cell;
 }
